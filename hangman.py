@@ -13,6 +13,8 @@ flag=0
 
 ans=list(str(l[x]))
 for i in range(0,len(l[x])):
+    if l[x][i]==" ":
+        l[x][i]='-'
     ans[i]='-'
 cnt=0
 inp=set()
@@ -54,7 +56,7 @@ else:
 
 
 if "".join(ans)==l[x] and flag==0:
-    print("You guessed the word!")
+    print("You guessed the word! The word was "+str(l[x]))
     print("You survived!")
 elif(flag!=1):
     print("You are hanged!")
