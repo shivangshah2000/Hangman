@@ -8,8 +8,118 @@ l=list(data.keys())
 play=input(r'Type "play" to play the game, "exit" to quit: ')
 #l=['python', 'java', 'kotlin', 'javascript']
 x=random.randint(0,len(l)-1)
-
 flag=0
+
+def hangphoto(n):
+   
+        if n== 8:
+            print(r'''
+             ____________
+            |           _|_
+            |          |. .|
+            |          |_^_|
+            |            |
+            |           /|\
+            |          / | \
+            |            |
+            |           / \
+        ____|_____     /   \
+''')
+
+        if n== 1:
+                print('''
+
+
+
+
+
+
+
+         
+        __________     
+''')
+        if n== 2:
+            print('''
+             
+            |  
+            |          
+            |   
+            |            
+            |           
+            |          
+            |           
+            |           
+        ____|_____  
+''')
+        if n== 3:
+            print('''
+             ____________
+            |            |
+            |   
+            |          
+            |           
+            |           
+            |          
+            |            
+            |           
+        ____|_____     
+''')
+        if n== 4:
+            print('''
+             ____________
+            |           _|_
+            |          |. .|
+            |          |_^_|
+            |            
+            |           
+            |          
+            |           
+            |           
+        ____|_____     
+''')
+        if n== 5:
+            print('''
+             ____________
+            |           _|_
+            |          |. .|
+            |          |_^_|
+            |            |
+            |            |
+            |            | 
+            |            |
+            |            
+        ____|_____       
+''')
+        if n== 6:
+            print('''
+             ____________
+            |           _|_
+            |          |. .|
+            |          |_^_|
+            |            |
+            |            |
+            |            | 
+            |            |
+            |           / 
+        ____|_____     /   
+''')
+        if n== 7:
+            print(r'''
+             ____________
+            |           _|_
+            |          |. .|
+            |          |_^_|
+            |            |
+            |            |
+            |            | 
+            |            |
+            |           / \
+        ____|_____     /   \
+''')
+        
+                
+    
+
 
 ans=list(str(l[x]))
 for i in range(0,len(l[x])):
@@ -46,9 +156,10 @@ if play=="play":
             cnt+=1
             print("No such letter in the word. Chances left "+str((8-cnt)))
         inp.add(c)
+        hangphoto(cnt)
         if "".join(ans)==l[x]:
             flag=1
-            print("You guessed the word!")
+            print("You guessed the word! The word was "+str(l[x]))
             print("You survived!")
             break
 else:
